@@ -1,0 +1,20 @@
+<launch>
+
+<arg name="map_size_x" default="10.0"/>
+<arg name="map_size_y" default="10.0"/>
+<arg name="map_size_z" default=" 5.0"/>
+
+<arg name="start_x" default=" 0.0"/>
+<arg name="start_y" default=" 0.0"/>
+<arg name="start_z" default=" 1.0"/>
+
+
+
+  <node pkg="waypoint_generator" name="waypoint_generator" type="waypoint_generator" output="screen">
+      <remap from="~goal" to="/goal"/>
+      <param name="waypoint_type" value="manual-lonely-waypoint"/>    
+  </node>
+
+
+
+</launch>
